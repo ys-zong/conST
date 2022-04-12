@@ -244,7 +244,7 @@ class conST_training:
                 z2, mu2, logvar2, de_feat2, de_feat_img2, q2, feat_x2, gnn_z2 = self.model(x_2, adj2, img_2)
                 feat_x1 = self.model.projection(z1)
                 feat_x2 = self.model.projection(z2)
-                loss_cont = self.model.contrastive_loss(feat_x1, feat_x2)
+                loss_cont = self.model.cont_l2l(feat_x1, feat_x2)
 
                 latent_z, mu, logvar, de_feat, de_feat_img, out_q, feat_x, _ = self.model(self.node_X,
                                                                                           self.adj_norm, self.img)
