@@ -13,6 +13,8 @@ import cv2
 
 from timm.models import create_model
 from datasets import DataAugmentationForMAE
+import modeling_pretrain
+from modeling_pretrain import pretrain_mae_base_patch16_224
 
 
 def get_args():
